@@ -1,4 +1,28 @@
-/.bsp/
+#scala
+target
+*.class
+
+# other?
+.history
+.scala_dependencies
+.cache-main
+
+#intellij
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
 /.idea/
+/.bsp/
 /project/
 /target/
+
+### SBT ###
+dist/*
+target/
+lib_managed/
+src_managed/
+.cache
+.lib/
+
