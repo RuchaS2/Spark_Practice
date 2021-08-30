@@ -25,7 +25,6 @@ object SparkContext {
     val conf2 = new SparkConf().setAppName("sparkContext-2").setMaster("local[1]")
     val sparkContext2 = new SparkContext(conf2)
 
-    println("Second SparkContext:")
     println("APP Name :"+sparkContext2.appName);
     println("Deploy Mode :"+sparkContext2.deployMode);
     println("Master :"+sparkContext2.master);
