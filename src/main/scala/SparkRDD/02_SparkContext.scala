@@ -1,10 +1,12 @@
+package SparkRDD
+
 /*
 Scala Context
-Since Spark 1.x, Spark SparkContext is an entry point to Spark and defined in org.apache.spark package
+Since Spark 1.x, Spark SparkRDD.SparkContext is an entry point to Spark and defined in org.apache.spark package
 used to programmatically create Spark RDD, accumulators, and broadcast variables on the cluster.
-You can create only one SparkContext per JVM.
+You can create only one SparkRDD.SparkContext per JVM.
 
-SparkContext are also present in SparkSession
+SparkRDD.SparkContext are also present in SparkSession
 Spark session internally creates the Spark Context.
  */
 import org.apache.spark.{SparkConf, SparkContext}
@@ -15,7 +17,7 @@ object SparkContext {
     //Register it as a singleton object -  use this to create Spark RDD
     val sparkContext = new SparkContext(sparkConf)
 
-    println("First SparkContext:")
+    println("First SparkRDD.SparkContext:")
     println("APP Name :" + sparkContext.appName)
     println("Deploy Mode :" + sparkContext.deployMode)
     println("Master :" + sparkContext.master)

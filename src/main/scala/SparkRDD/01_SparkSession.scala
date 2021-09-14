@@ -1,3 +1,5 @@
+package SparkRDD
+
 /*
 Spark Session -
 entry point to underlying Spark functionality in order

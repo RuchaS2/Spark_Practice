@@ -21,15 +21,15 @@ Multiple sessions -
 Spark gives a straight forward API to create a new session which shares the same spark context.
 
 <h4> <li>Spark Context</li></h4>
-Since Spark 1.x, Spark SparkContext is an entry point to Spark and defined in org.apache.spark package
+Since Spark 1.x, Spark SparkRDD.SparkContext is an entry point to Spark and defined in org.apache.spark package
 used to programmatically create Spark RDD, accumulators, and broadcast variables on the cluster.
-You can create only one SparkContext per JVM.
+You can create only one SparkRDD.SparkContext per JVM.
 
-SparkContext are also present in SparkSession
+SparkRDD.SparkContext are also present in SparkSession
 Spark session internally creates the Spark Context.
-first you need to create a SparkConf instance by assigning app name and setting master by using the SparkConf static methods setAppName() and setMaster() respectively and then pass SparkConf object as an argument to SparkContext constructor to create Spark Context.
+first you need to create a SparkConf instance by assigning app name and setting master by using the SparkConf static methods setAppName() and setMaster() respectively and then pass SparkConf object as an argument to SparkRDD.SparkContext constructor to create Spark Context.
 
-getOrCreate() to create SparkContext. This function is used to get or instantiate a SparkContext and register it as a singleton object.
+getOrCreate() to create SparkRDD.SparkContext. This function is used to get or instantiate a SparkRDD.SparkContext and register it as a singleton object.
 <h4><li> RDD basics</li></h4>
 Spark RDD - Resilient Distributed Dataset
 fundamental DS, immutable distributed collection of objects.

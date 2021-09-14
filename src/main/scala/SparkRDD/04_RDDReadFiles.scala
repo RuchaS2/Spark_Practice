@@ -1,3 +1,5 @@
+package SparkRDD
+
 /*
 Spark – Read multiple text files into single RDD -
 textFile() – Read single or multiple text, csv files and returns a single Spark RDD [String]
