@@ -1,3 +1,5 @@
+package SparkRDD
+
 /*
 Spark Session -
 entry point to underlying Spark functionality in order
@@ -18,7 +20,7 @@ object SparkTest {
     // SparkSession will be created using SparkSession.builder() builder patterns.
     val spark = SparkSession.builder()
       .master("local[1]")
-      .appName("SparkByExamples")
+      .appName("SparkSession")
       .getOrCreate();
     println(spark.version)
 
