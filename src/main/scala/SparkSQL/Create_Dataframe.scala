@@ -1,5 +1,6 @@
 package SparkSQL
-
+import org.apache.spark.sql.types.{StringType, StructField, StructType}
+import org.apache.spark.sql.Row
 import org.apache.spark.sql.SparkSession
 
 /*
@@ -9,7 +10,7 @@ You can also create a DataFrame from different sources like Text, CSV, JSON, XML
 RDBMS Tables, Hive, HBase, and many more.
 Ways-
 1. Spark Create DataFrame from RDD - toDF() , createDataFrame() from SparkSession , createDataFrame() with the Row type
-
+2. Create Spark DataFrame from List and Seq Collection - toDF() , createDataFrame()
  */
 object Create_Dataframe {
 
@@ -26,5 +27,12 @@ object Create_Dataframe {
   dfFromRDD1.printSchema()
 
 
+  //2. Create Spark DataFrame from List and Seq Collection
+  val schema = StructType( Array(
+    StructField("language", StringType,true),
+    StructField("language", StringType,true)
+  ))
+  val rowRDD = rdd.map(attributes => Row(attributes._1, attributes._2))
+  val dfFromRDD3 = spark.createDataFrame(rowRDD,schema)
 
 }
